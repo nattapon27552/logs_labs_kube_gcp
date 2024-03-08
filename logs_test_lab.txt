@@ -1,0 +1,357 @@
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-00-832132f55cc0)$ kubectl get pods
+NAME                       READY   STATUS    RESTARTS   AGE
+nginx-1-6f56f68fd8-fq5sk   1/1     Running   0          21m
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-00-832132f55cc0)$ kubectl exec -it nginx-1-6f56f68fd8-fq5sk -- /bin/
+error: Internal error occurred: error executing command in container: failed to exec in container: failed to start exec "d9bceead3704702f801892053f642fd6d4bda297fb3f9c2687e5f2ce009bad6b": OCI runtime exec failed: exec failed: unable to start container process: exec: "/bin/": is a directory: unknown
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-00-832132f55cc0)$ kubectl exec -it nginx-1-6f56f68fd8-fq5sk -- /bin/
+error: Internal error occurred: error executing command in container: failed to exec in container: failed to start exec "603e9a93b2a40f8a21e1520e4c01f1831192b5122f956ddbfbc15893721ede8e": OCI runtime exec failed: exec failed: unable to start container process: exec: "/bin/": is a directory: unknown
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-00-832132f55cc0)$ kubectl exec -it nginx-1-6f56f68fd8-fq5sk -- bash
+
+1  apt-get update
+    2  #
+    3  history
+root@nginx-1-6f56f68fd8-fq5sk:/# exit
+exit
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-00-832132f55cc0)$ history
+    1  gcloud container clusters get-credentials autopilot-cluster-1 --region us-west1 --project qwiklabs-gcp-00-832132f55cc0
+    2  ls 
+    3  ls -la
+    4  kubectl version --client
+    5  kubectl config view
+    6  clear
+    7  kubectl get posds
+    8  gcloud container clusters get-credentials autopilot-cluster-1 --region us-west1 --project qwiklabs-gcp-00-832132f55cc0
+    9  kubectl get posds
+   10  kubectl get pods
+   11  kubctll logs -f nginx-1-6f56f68fd8-fq5sk
+   12  kubetll logs -f nginx-1-6f56f68fd8-fq5sk
+   13  kubectll logs -f nginx-1-6f56f68fd8-fq5sk
+   14  kubectl logs -f nginx-1-6f56f68fd8-fq5sk
+   15  kubectl get pods
+   16  kubectl exec -it nginx-1-6f56f68fd8-fq5sk -- /bin/
+   17  kubectl exec -it nginx-1-6f56f68fd8-fq5sk -- bash
+   18  history
+   19  kubectl exec -it nginx-1-6f56f68fd8-fq5sk -- /bin/bash
+
+===================================================================================================================================
+#cmd shell on cloud gcp
++Tab1+
+
+E0308 09:04:01.314249    1670 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:01.529103    1670 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:01.744239    1670 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-1-f947b58f-vmknt   0/1     Pending   0          30s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+E0308 09:04:07.768258    1681 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:08.235957    1681 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:08.452819    1681 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:08.669757    1681 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-1-f947b58f-vmknt   0/1     Pending   0          37s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+E0308 09:04:13.359886    1692 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:13.999209    1692 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:14.214543    1692 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:14.429915    1692 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-1-f947b58f-vmknt   0/1     Pending   0          43s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+E0308 09:04:52.588141    2408 memcache.go:287] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:53.239486    2408 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:53.453910    2408 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+E0308 09:04:53.668647    2408 memcache.go:121] couldn't get resource list for metrics.k8s.io/v1beta1: the server is currently unable to handle the request
+NAME                     READY   STATUS              RESTARTS   AGE
+nginx-1-f947b58f-vmknt   0/1     ContainerCreating   0          82s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+No resources found in default namespace.
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl create deployment --image nginx nginx-1
+Warning: autopilot-default-resources-mutator:Autopilot updated Deployment default/nginx-1: defaulted unspecified resources for containers [nginx] (see http://g.co/gke/autopilot-defaults)
+deployment.apps/nginx-1 created
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-1-f947b58f-fm9bq   1/1     Running   0          3s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+nginx-1-f947b58f-fm9bq   1/1     Running   0          10s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl top nodes
+NAME                                           CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+gk3-autopilot-cluster-1-pool-2-45e91b63-gzf2   575m         29%    2015Mi          33%       
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ export my_nginx_pod=nginx-1-f947b58f-fm9bq
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ echo $my_nginx_pod
+nginx-1-f947b58f-fm9bq
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl describe pod $my_nginx_pod
+Name:             nginx-1-f947b58f-fm9bq
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             gk3-autopilot-cluster-1-pool-2-45e91b63-gzf2/10.150.0.4
+Start Time:       Fri, 08 Mar 2024 09:06:13 +0000
+Labels:           app=nginx-1
+                  pod-template-hash=f947b58f
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.66.128.21
+IPs:
+  IP:           10.66.128.21
+Controlled By:  ReplicaSet/nginx-1-f947b58f
+Containers:
+  nginx:
+    Container ID:   containerd://23f097c0a5c564a117e0875ecf1fbdc5d9fa3d3ba23f47cc43495cab817987db
+    Image:          nginx
+    Image ID:       docker.io/library/nginx@sha256:c26ae7472d624ba1fafd296e73cecc4f93f853088e6a9c13c0d52f6ca5865107
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Fri, 08 Mar 2024 09:06:15 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:                500m
+      ephemeral-storage:  1Gi
+      memory:             2Gi
+    Requests:
+      cpu:                500m
+      ephemeral-storage:  1Gi
+      memory:             2Gi
+    Environment:          <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-wm7gk (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-wm7gk:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Guaranteed
+Node-Selectors:              <none>
+Tolerations:                 kubernetes.io/arch=amd64:NoSchedule
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From                                   Message
+  ----    ------     ----   ----                                   -------
+  Normal  Scheduled  3m10s  gke.io/optimize-utilization-scheduler  Successfully assigned default/nginx-1-f947b58f-fm9bq to gk3-autopilot-cluster-1-pool-2-45e91b63-gzf2
+  Normal  Pulling    3m8s   kubelet                                Pulling image "nginx"
+  Normal  Pulled     3m8s   kubelet                                Successfully pulled image "nginx" in 571.607022ms (571.628402ms including waiting)
+  Normal  Created    3m8s   kubelet                                Created container nginx
+  Normal  Started    3m8s   kubelet                                Started container nginx
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ nano ~/test.html
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ls -la
+total 20
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:01 .
+drwxr-xr-x 6 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:10 ..
+drwxr-x--- 4 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:00 cache
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f 2932 Mar  8 08:56 config
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f  648 Mar  8 09:00 gke_gcloud_auth_plugin_cache
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ls -la
+total 20
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:01 .
+drwxr-xr-x 6 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:10 ..
+drwxr-x--- 4 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:00 cache
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f 2932 Mar  8 08:56 config
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f  648 Mar  8 09:00 gke_gcloud_auth_plugin_cache
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl cp ~/test.html $my_nginx_pod:/usr/share/nginx/html/test.html
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ^C
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ls -la ~/
+total 48
+drwxr-xr-x 6 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:10 .
+drwxr-xr-x 4 root                    root                    4096 Mar  8 08:09 ..
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f  866 Mar  8 09:11 .bash_history
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f   95 Mar  8 08:48 .bashrc
+drwxr-xr-x 2 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 08:48 .docker
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:01 .kube
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 08:58 .local
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 08:48 .npm
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f   96 Mar  8 08:48 .profile
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f  913 Mar  8 08:48 README-cloudshell.txt
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f   29 Mar  8 09:10 test.html
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f  788 Mar  8 08:58 .viminfo
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl expose pod $my_nginx_pod --port 80 --type LoadBalancer
+service/nginx-1-f947b58f-fm9bq exposed
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get services
+NAME                     TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+kubernetes               ClusterIP      34.118.224.1     <none>        443/TCP        18m
+nginx-1-f947b58f-fm9bq   LoadBalancer   34.118.230.175   <pending>     80:31032/TCP   15s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ curl http://34.118.230.175/test.html
+^C
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ^C
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl get services
+NAME                     TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
+kubernetes               ClusterIP      34.118.224.1     <none>         443/TCP        21m
+nginx-1-f947b58f-fm9bq   LoadBalancer   34.118.230.175   34.85.180.83   80:31032/TCP   3m41s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ curl http://34.85.180.83/test.html
+ This is title
+ Hello world 
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ^C
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ kubectl top pods
+NAME                     CPU(cores)   MEMORY(bytes)   
+nginx-1-f947b58f-fm9bq   0m           3Mi             
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ git clone https://github.com/GoogleCloudPlatform/training-data-analyst
+Cloning into 'training-data-analyst'...
+remote: Enumerating objects: 64478, done.
+remote: Counting objects: 100% (162/162), done.
+remote: Compressing objects: 100% (114/114), done.
+remote: Total 64478 (delta 75), reused 120 (delta 46), pack-reused 64316
+Receiving objects: 100% (64478/64478), 698.80 MiB | 15.63 MiB/s, done.
+Resolving deltas: 100% (41152/41152), done.
+Updating files: 100% (12860/12860), done.
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ln -s ~/training-data-analyst/courses/ak8s/v1.1 ~/ak8s
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ cd ~/ak8s/GKE_Shell/
+-bash: cd: /home/student_01_d53774d4853f/ak8s/GKE_Shell/: No such file or directory
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ ls -la
+total 24
+drwxr-xr-x  4 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:18 .
+drwxr-xr-x  6 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:19 ..
+drwxr-x---  4 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:00 cache
+-rw-------  1 student_01_d53774d4853f student_01_d53774d4853f 2932 Mar  8 08:56 config
+-rw-------  1 student_01_d53774d4853f student_01_d53774d4853f  648 Mar  8 09:00 gke_gcloud_auth_plugin_cache
+drwxr-xr-x 12 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:19 training-data-analyst
+student_01_d53774d4853f@cloudshell:~/.kube (qwiklabs-gcp-03-7406d32f4012)$ cd ..
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ ls -la
+total 52
+drwxr-xr-x 6 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:19 .
+drwxr-xr-x 4 root                    root                    4096 Mar  8 08:09 ..
+lrwxrwxrwx 1 student_01_d53774d4853f student_01_d53774d4853f   69 Mar  8 09:19 ak8s -> /home/student_01_d53774d4853f/training-data-analyst/courses/ak8s/v1.1
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f 1230 Mar  8 09:20 .bash_history
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f   95 Mar  8 08:48 .bashrc
+drwxr-xr-x 2 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 08:48 .docker
+drwxr-xr-x 4 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 09:18 .kube
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 08:58 .local
+drwxr-xr-x 3 student_01_d53774d4853f student_01_d53774d4853f 4096 Mar  8 08:48 .npm
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f   96 Mar  8 08:48 .profile
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f  913 Mar  8 08:48 README-cloudshell.txt
+-rw-r--r-- 1 student_01_d53774d4853f student_01_d53774d4853f   29 Mar  8 09:10 test.html
+-rw------- 1 student_01_d53774d4853f student_01_d53774d4853f  788 Mar  8 08:58 .viminfo
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ git clone https://github.com/GoogleCloudPlatform/training-data-analyst                                                                                                       
+Cloning into 'training-data-analyst'...
+remote: Enumerating objects: 64478, done.
+remote: Counting objects: 100% (162/162), done.
+remote: Compressing objects: 100% (114/114), done.
+remote: Total 64478 (delta 75), reused 120 (delta 46), pack-reused 64316
+Receiving objects: 100% (64478/64478), 698.80 MiB | 15.54 MiB/s, done.
+Resolving deltas: 100% (41152/41152), done.
+Updating files: 100% (12860/12860), done.
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ ln -s ~/training-data-analyst/courses/ak8s/v1.1 ~/ak8s
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ cd ~/ak8s/GKE_Shell/
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl apply -f ./new-nginx-pod.yaml
+Warning: autopilot-default-resources-mutator:Autopilot updated Pod default/new-nginx: defaulted unspecified resources for containers [new-nginx] (see http://g.co/gke/autopilot-defaults)
+pod/new-nginx created
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+new-nginx                1/1     Running   0          30s
+nginx-1-f947b58f-fm9bq   1/1     Running   0          16m
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ nano ./new-nginx-pod.yaml                                                                                                                                     
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+new-nginx                1/1     Running   0          66s
+nginx-1-f947b58f-fm9bq   1/1     Running   0          16m
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl exec -it new-nginx -- /bin/bash
+root@new-nginx:/# apt-get update
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8786 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [12.7 kB]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [144 kB]
+Fetched 9197 kB in 3s (3251 kB/s)                         
+Reading package lists... Done
+root@new-nginx:/# apt-get install nano
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libgpm2 libncursesw6
+Suggested packages:
+  gpm hunspell
+The following NEW packages will be installed:
+  libgpm2 libncursesw6 nano
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 837 kB of archives.
+After this operation, 3339 kB of additional disk space will be used.
+Do you want to continue? [Y/y  
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libncursesw6 amd64 6.4-4 [134 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 nano amd64 7.2-1 [689 kB]
+Get:3 http://deb.debian.org/debian bookworm/main amd64 libgpm2 amd64 1.20.7-10+b1 [14.2 kB]
+Fetched 837 kB in 0s (9675 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libncursesw6:amd64.
+(Reading database ... 7590 files and directories currently installed.)
+Preparing to unpack .../libncursesw6_6.4-4_amd64.deb ...
+Unpacking libncursesw6:amd64 (6.4-4) ...
+Selecting previously unselected package nano.
+Preparing to unpack .../archives/nano_7.2-1_amd64.deb ...
+Unpacking nano (7.2-1) ...
+Selecting previously unselected package libgpm2:amd64.
+Preparing to unpack .../libgpm2_1.20.7-10+b1_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-10+b1) ...
+Setting up libgpm2:amd64 (1.20.7-10+b1) ...
+Setting up libncursesw6:amd64 (6.4-4) ...
+Setting up nano (7.2-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+Processing triggers for libc-bin (2.36-9+deb12u4) ...
+root@new-nginx:/# cd /usr/share/nginx/html
+nano test.html
+root@new-nginx:/usr/share/nginx/html# cat test.html 
+ This is title
+ Hello world 
+root@new-nginx:/usr/share/nginx/html# exit
+exit
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl get service
+NAME                     TYPE           CLUSTER-IP       EXTERNAL-IP    PORT(S)        AGE
+kubernetes               ClusterIP      34.118.224.1     <none>         443/TCP        33m
+nginx-1-f947b58f-fm9bq   LoadBalancer   34.118.230.175   34.85.180.83   80:31032/TCP   15m
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+new-nginx                1/1     Running   0          5m50s
+nginx-1-f947b58f-fm9bq   1/1     Running   0          21m
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl port-forward new-nginx 10081:80
+Forwarding from 127.0.0.1:10081 -> 80
+Handling connection for 10081
+^Cstudent_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ curl http://127.0.0.1:10081/test.html
+curl: (7) Failed to connect to 127.0.0.1 port 10081: Connection refused
+student_01_d53774d4853f@cloudshell:~/ak8s/GKE_Shell (qwiklabs-gcp-03-7406d32f4012)$ kubectl port-forward new-nginx 10081:80
+Forwarding from 127.0.0.1:10081 -> 80
+Handling connection for 10081
+
++Tab2+
+Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to qwiklabs-gcp-03-7406d32f4012.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ curl http://127.0.0.1:10081/test.html
+ This is title
+ Hello world 
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ curl http://127.0.0.1:10081/test.html
+ This is title
+ Hello world 
+student_01_d53774d4853f@cloudshell:~ (qwiklabs-gcp-03-7406d32f4012)$ kubectl logs new-nginx -f --timestamps
+2024-03-08T09:22:08.140062968Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+2024-03-08T09:22:08.140134509Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+2024-03-08T09:22:08.144361988Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+2024-03-08T09:22:08.159698297Z 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+2024-03-08T09:22:08.168708566Z 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+2024-03-08T09:22:08.169098996Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+2024-03-08T09:22:08.169188746Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+2024-03-08T09:22:08.177097525Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+2024-03-08T09:22:08.178588875Z /docker-entrypoint.sh: Configuration complete; ready for start up
+2024-03-08T09:22:08.186242065Z 2024/03/08 09:22:08 [notice] 1#1: using the "epoll" event method
+2024-03-08T09:22:08.186452204Z 2024/03/08 09:22:08 [notice] 1#1: nginx/1.25.4
+2024-03-08T09:22:08.186462715Z 2024/03/08 09:22:08 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2024-03-08T09:22:08.186468044Z 2024/03/08 09:22:08 [notice] 1#1: OS: Linux 5.15.133+
+2024-03-08T09:22:08.186473204Z 2024/03/08 09:22:08 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024-03-08T09:22:08.186547215Z 2024/03/08 09:22:08 [notice] 1#1: start worker processes
+2024-03-08T09:22:08.186801815Z 2024/03/08 09:22:08 [notice] 1#1: start worker process 29
+2024-03-08T09:22:08.186945854Z 2024/03/08 09:22:08 [notice] 1#1: start worker process 30
+2024-03-08T09:29:04.063563967Z 127.0.0.1 - - [08/Mar/2024:09:29:04 +0000] "GET /test.html HTTP/1.1" 200 29 "-" "curl/7.74.0" "-"
+2024-03-08T09:29:26.712606419Z 127.0.0.1 - - [08/Mar/2024:09:29:26 +0000] "GET /test.html HTTP/1.1" 200 29 "-" "curl/7.74.0" "-"
